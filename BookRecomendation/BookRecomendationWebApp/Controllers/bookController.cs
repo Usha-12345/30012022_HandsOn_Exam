@@ -9,12 +9,14 @@ namespace BookRecomendationWebApp.Controllers
     public class bookController : Controller
     {
         // GET: book
+        BookRecomendationBL blobj;
         public ActionResult Index()
         {
             return View();
         }
 
         // GET: book/Details/5
+
         public ActionResult Details(int id)
         {
             return View();

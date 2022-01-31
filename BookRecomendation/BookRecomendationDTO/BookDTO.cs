@@ -11,7 +11,6 @@ namespace BookDTO
         public String authorName { get; set; }
         public String authorID { get; set; }
 
-        public String author { get; set; }
-
+        
     }
 }

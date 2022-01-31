@@ -10,6 +10,8 @@ namespace BookRecomendationWebApp.Controllers
     {
         // GET: book
         BookRecomendationBL blobj;
+        private object db;
+
         public ActionResult Index()
         {
             return View();
@@ -23,6 +25,7 @@ namespace BookRecomendationWebApp.Controllers
         }
 
         // GET: book/Create
+
         public ActionResult Create()
         {
             return View();
@@ -36,7 +39,18 @@ namespace BookRecomendationWebApp.Controllers
             {
                 // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
+                if (collection.IsValid)
+                {
+                    db.AddToBooks(newBook);
+
+
+
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View("Error");
+                }
             }
             catch
             {

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookRecomendationDTO
+namespace BookDTO
 {
-    public class BookDTO
+    public class BookRecomendationDTO
     {
         public String authorName { get; set; }
         public String authorID { get; set; }

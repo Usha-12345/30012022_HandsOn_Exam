@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using BookDTO;
 using BookRecomendationDataAccessLayer;
-using BookRecomendationDTO;
+
 
 namespace BookRecomendationBusinessLayer
 {
@@ -34,12 +36,16 @@ namespace BookRecomendationBusinessLayer
 
         public void ShowReviewsForBook()
         {
-           public List<BookDetailsDTO>
+            BookRecomendationDAL dalObj = new BookRecomendationDAL();
+            List<BookRecomendationDTO> lstOfBooks = dalObj.FetchAllBooks();
+           
+            return lstOfBooks;
         }
 
 
-        public void AddReviewForBook()
+        public int AddReviewForBook(BookRecomendationDTO newauthorname,out int  newauthorID )
         {
+        throw new NotImplementedException;
           
         }
       

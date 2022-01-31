@@ -1,6 +1,6 @@
 CREATE DATABASE BookRecomendation;
 
-USE BookRecomendation;
+USE bookshop;
 
 
 CREATE TABLE Authors(

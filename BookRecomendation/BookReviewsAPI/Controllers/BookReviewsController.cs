@@ -15,10 +15,28 @@ namespace BookReviewsAPI.Controllers
 
 
         [HttpGet]
-        public void GetRatingsForBook()
+        public HttpResponseMessage GetAllDeptDetails()
         {
 
+        
+                try
+                {
+                BookRecomendationBL blObj = new BookRecomendationBL();
+                    List<BookRecomendationDTO> lstOfDept = blObj.GetAllBooks();
+                    if (lstOfDept.Count > 0)
+                        return Request.CreateResponse(HttpStatusCode.OK, lstOfDept);
+                    else
+                        return Request.CreateResponse(HttpStatusCode.OK, "No Dept Details");
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+            
         }
+    }
+}
 
     }
 }

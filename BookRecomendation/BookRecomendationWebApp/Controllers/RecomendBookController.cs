@@ -16,6 +16,7 @@ namespace BookRecomendationWebApp.Controllers
     public class RecomendBookController : Controller
     {
         // GET: RecomendBook
+        BookRecomendationBL blobj;
         public ActionResult Index()
         {
             return View();
@@ -23,8 +24,17 @@ namespace BookRecomendationWebApp.Controllers
 
 
 
-        public void AddReviews()
+        public ViewResult AddReviews()
         {
+            try
+            {
+                return View();
+
+            }
+            catch(Exception ex)
+            {
+                return View("Error");
+            }
 
         }
 

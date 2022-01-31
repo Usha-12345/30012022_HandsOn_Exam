@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\bookController.cs" />
     <Compile Include="Controllers\RecomendBookController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -174,6 +175,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\BookRecomend\" />
+    <Folder Include="Views\book\" />
     <Folder Include="Views\RecomendBook\" />
   </ItemGroup>
   <ItemGroup>

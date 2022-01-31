@@ -11,14 +11,24 @@ namespace BookRecomendationBusinessLayer
     //DO NOT MODIFY THE METHOD NAMES : Adding of parameters / changing the return types of the given methods may be required. 
     public class BookRecomendationBL
     {
-        BookRecomendationBL dalobj;
+         BookRecomendationDAL dalobj;
+       
+
         public BookRecomendationBL()
         {
-            dalobj = new BookRecomendationBL();
+            dalobj = new BookRecomendationDAL();
         }
-        public int connectionToDB()
+        public int ConnectToDB()
         {
-
+            try
+            {
+                BookRecomendationDAL dalObj = new BookRecomendationDAL();
+                return dalObj.ConnectionToDB();
+            }
+            catch (Exception)
+            {
+                return -89;
+            }
         }
 
 
